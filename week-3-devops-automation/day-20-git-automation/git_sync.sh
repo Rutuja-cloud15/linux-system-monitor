@@ -31,11 +31,11 @@ git push origin main
 # 3. Handle connection or token failures using Exit Status
 if [ $? -eq 0 ]; then
     echo "========================================"
-    echo "✅ SUCCESS: Workspace synced to GitHub at $CURRENT_TIME"
+    echo "SUCCESS: Workspace synced to GitHub at $CURRENT_TIME"
     echo "========================================"
 else
     echo "========================================"
-    echo "❌ CRITICAL ERROR: Git push failed. Verify network or access token."
+    echo "CRITICAL ERROR: Git push failed. Verify network or access token."
     echo "========================================"
     exit 1
 fi
