@@ -1,18 +1,30 @@
-#Linux System Monitor & DevOps Playbook
+# DevOps Engineering Portfolio
 
-Welcome to my central DevOps engineering portfolio. This repository tracks my progression from core Linux system administration to advanced container architecture and automated scripting pipelines.
+Welcome to my comprehensive DevOps Engineering repository. The intensive engineering labs, I built, documented, and deployed an automated, containerized system-monitoring infrastructure from the kernel layer up to the cloud.
 
-## Week 3: Production Bash Scripting & Automation
+## ore Technology Stack
+* **Operating Systems**: Linux CLI, Ubuntu Core, Windows Subsystem for Linux (WSL)
+* **Automation Scripting**: Advanced Bash/Shell Scripting, Regular Expressions (`awk`, `grep`, `sed`)
+* **Containerization**: Docker, Custom Dockerfiles, Ephemeral Storage Layering, Bind Mount Volumes
+* **Source Control**: Git VCS, Declarative Hook Simulations, Automated Remote Synchronizers
+* **CI/CD Mechanics**: Code Linting Gateways, Syntactic Validation Gateways, Defensive Deployment Pipelines
 
-This week, I pivoted from executing individual, manual commands to building modular, intelligent, and self-healing system utilities.
+---
 
-### Daily Automation Engineering Timeline
+## Architectural Project Roadmap
 
-| Day | Project Directory Links | Core Automation Concept | Key Engineering Implementation |
-| :--- | :--- | :--- | :--- |
-| **Day 15** | 📁 [Basic Script Setup](./week-3-devops-automation/day-15-basic-script) | Executable Permissions | Configured environment headers and user privileges (`chmod +x`). |
-| **Day 16** | 📁 [Conditional Logic](./week-3-devops-automation/day-16-ifelse-logic) | Variable Branches | Used `if/else` logic and numerical comparisons (`-gt`) to prevent redundant cleanups. |
-| **Day 17** | 📁 [Multi-Container Loops](./week-3-devops-automation/day-17-loops) | Text-Stream Iteration | Implemented dynamic `for` loops utilizing custom string formatting to audit isolated container environments. |
-| **Day 18** | 📁 [Functions & Errors](./week-3-devops-automation/day-18-functions-errors) | Resilient Fail-Safes | Designed modular functions with local variable scopes and built process exit status checks (`$?`). |
-| **Day 19** | 📁 [Cron Scheduling](./week-3-devops-automation/day-19-cron-scheduling) | Daemon Automation | Scheduled background runtime execution patterns using native system Crontabs. |
-| **Day 20** | 📁 [Git Sync Engine](./week-3-devops-automation/day-20-git-automation) | CI/CD Pipelines | Developed a fully automated code delivery and workspace sync tool featuring dynamic timezone timestamps. |
+### Phase 1: Linux Systems & Kernel Scripting 
+* Engineered native shell scripts to scrape real-time Linux hardware utilization metrics.
+* Configured automated system automation utilizing background task schedules.
+
+### Phase 2: Cloud Infrastructure & Automation
+* Provisioned virtual computing instances and designed secure software networks.
+* Built an automated Git tracking and deployment engine script to manage live code assets.
+
+### Phase 3: Containerization & Continuous Delivery 
+* Wrote production-grade `Dockerfiles` to containerize decoupled web components.
+* Implemented Docker Volumes to safely pipe real-time host system data into runtime container sandboxes.
+* Built an automated CI/CD pipeline simulation that screens code for compilation bugs before triggering releases.
+
+---
+
