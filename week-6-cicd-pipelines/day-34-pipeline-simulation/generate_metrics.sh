@@ -1,3 +1,22 @@
+#!/bin/bash
+
+# Define the absolute path to yesterday's shared Docker volume folder
+OUTPUT_DIR="$HOME/devops-workspace/linux-system-monitor/week-5-docker-containers/day-30-docker-volumes/shared-web"
+OUTPUT_FILE="$OUTPUT_DIR/index.html"
+
+# Make sure the directory exists just in case
+mkdir -p "$OUTPUT_DIR"
+
+echo "Gathering live system metrics..."
+
+# Extract real-time metrics
+DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}')
+MEM_FREE=$(free -m | awk 'NR==2 {print $4}')
+MEM_TOTAL=$(free -m | awk 'NR==2 {print $2}')
+CPU_LOAD=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+
+# Generate a gorgeous dashboard HTML page directly into the shared Docker folder
+cat << EOF > "$OUTPUT_FILE"
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +38,21 @@
         
         <div class="stat-box">
             <span>CPU Utilization:</span>
-            <span class="value">0%</span>
+            <span class="value">${CPU_LOAD}%</span>
         </div>
         <div class="stat-box">
             <span> Available Memory:</span>
-            <span class="value">7109MB / 7880MB</span>
+            <span class="value">${MEM_FREE}MB / ${MEM_TOTAL}MB</span>
         </div>
         <div class="stat-box">
             <span>Disk Space Used:</span>
-            <span class="value">1%</span>
+            <span class="value">${DISK_USAGE}</span>
         </div>
         
         <p class="pulse">Auto-refreshing every 5 seconds...</p>
     </div>
 </body>
 </html>
+EOF
+
+echo "Dashboard updated inside the Docker volume seamlessly!"
